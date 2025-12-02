@@ -24,21 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append("motivo", motivo);
     formData.append("area", area);
 
-    await fetch(GOOGLE_SHEETS_URL, {
-      method: "POST",
-      body: formData
-    });
+    await fetch(GOOGLE_SHEETS_URL, { method: "POST", body: formData });
 
     // Envio de e-mail para o responsável correto
     let responsavelEmail = "";
-
-    if (area === "TI_AGUA_SUL") {
-      responsavelEmail = "auxinformatica@vitaengenharia.com.br";
-    }
-
-    if (area === "TI_BARRA_FUNDA") {
-      responsavelEmail = "ti@vitaengenharia.com.br";
-    }
+    if (area === "TI_AGUA_SUL") responsavelEmail = "auxinformatica@vitaengenharia.com.br";
+    if (area === "TI_BARRA_FUNDA") responsavelEmail = "ti@vitaengenharia.com.br";
 
     if (responsavelEmail !== "") {
       emailjs.send("service_vita", "template_4e1dwk8", {
@@ -54,5 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
     mensagemDiv.classList.remove('hidden');
 
     form.reset();
+  });
+
+  // Botão para acessar o painel com senha
+  document.getElementById("btnPainel").addEventListener("click", () => {
+    const senhaCorreta = "Vita123"; // coloque sua senha aqui
+    const senha = prompt("Digite a senha para acessar o painel:");
+    if (senha === senhaCorreta) {
+      window.location.href = "painel.html";
+    } else if (senha === null) {
+      alert("Acesso cancelado.");
+    } else {
+      alert("Senha incorreta!");
+    }
   });
 });

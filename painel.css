@@ -30,25 +30,11 @@ main {
   cursor: pointer;
 }
 
-#resetPainel {
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-}
+#resetPainel { background-color: #ff6b6b; color: white; border: none; }
+#resetPainel:hover { background-color: #e04848; }
 
-#resetPainel:hover {
-  background-color: #e04848;
-}
-
-#recarregarPainel {
-  background-color: #17a5ba;
-  color: white;
-  border: none;
-}
-
-#recarregarPainel:hover {
-  background-color: #0f8ca5;
-}
+#recarregarPainel { background-color: #17a5ba; color: white; border: none; }
+#recarregarPainel:hover { background-color: #0f8ca5; }
 
 table {
   width: 100%;
@@ -63,20 +49,10 @@ th {
   border-bottom: 2px solid #e0e0e0;
 }
 
-td {
-  padding: 14px;
-  border-bottom: 1px solid #eee;
-}
-
-tr:hover {
-  background: #eef6ff;
-}
+td { padding: 14px; border-bottom: 1px solid #eee; }
+tr:hover { background: #eef6ff; }
 
 @media (max-width: 750px) {
-  table {
-    font-size: 14px;
-  }
-  td, th {
-    padding: 10px;
-  }
+  table { font-size: 14px; }
+  td, th { padding: 10px; }
 }
