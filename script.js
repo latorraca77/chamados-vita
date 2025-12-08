@@ -47,16 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 
-  // Botão para acessar o painel com senha
-  document.getElementById("btnPainel").addEventListener("click", () => {
-    const senhaCorreta = "Vita123"; // coloque sua senha aqui
-    const senha = prompt("Digite a senha para acessar o painel:");
-    if (senha === senhaCorreta) {
-      window.location.href = "painel.html";
-    } else if (senha === null) {
-      alert("Acesso cancelado.");
-    } else {
-      alert("Senha incorreta!");
-    }
-  });
+  // Botão para acessar o painel com senha (TOPORIGHT)
+document.getElementById("btnPainelTopo").addEventListener("click", () => {
+  const senhaCorreta = "Vita123"; // sua senha aqui
+  const senha = prompt("Digite a senha para acessar o painel:");
+
+  if (senha === senhaCorreta) {
+    window.location.href = "painel.html";
+  } else if (senha !== null) {
+    alert("Senha incorreta!");
+  }
+});
 });
