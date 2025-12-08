@@ -8,13 +8,8 @@
 </head>
 <body>
   <header>
-  <div class="header-left">
-    <img src="logo-vita.png" alt="Logo da Empresa" id="logoEmpresa">
     <h1>Vita Ambiental - Sistema de Chamados</h1>
-  </div>
-
-  <button id="btnPainelTopo">Painel</button>
-</header>
+  </header>
 
   <main>
     <form id="formChamado">
@@ -32,6 +27,8 @@
         <option value="">Selecione...</option>
         <option value="TI_AGUA_SUL">T.I Água Sul</option>
         <option value="TI_BARRA_FUNDA">T.I Barra Funda</option>
+        <option value="Suporte">Suporte</option>
+        <option value="Administrativo">Administrativo</option>
       </select>
 
       <button type="submit">Enviar Chamado</button>
@@ -41,12 +38,13 @@
 
     <hr>
 
+    <button id="btnPainel">Acessar Painel</button>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    emailjs.init("4M9U0ZFGixP5mS166"); // minha Public Key
+    emailjs.init("4M9U0ZFGixP5mS166"); // sua Public Key
   </script>
 
   <script src="script.js"></script>
-
+</

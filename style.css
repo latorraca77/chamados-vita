@@ -5,6 +5,12 @@ body {
     padding: 0;
 }
 
+header {
+    background-color: #17a5ba;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
 main {
     max-width: 500px;
@@ -57,45 +63,4 @@ button:hover {
     border-radius: 4px;
     text-align: center;
     font-weight: bold;
-}
-
-
-/* --- HEADER NOVO --- */
-header {
-  background-color: #17a5ba;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 25px;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-#logoEmpresa {
-  height: 55px;
-  width: auto;
-}
-
-/* Botão do painel no topo */
-#btnPainelTopo {
-    background: white;
-    color: #0056b3;
-    padding: 6px 6px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: 0.2s;
-    width: 100px;
-}
-
-
-#btnPainelTopo:hover {
-  background-color: #e8e8e8;
 }
